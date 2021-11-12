@@ -11,6 +11,30 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
 }
+#menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 7px;
+    width: 200px;
+    background-color: #ffffff34;
+    backdrop-filter: blur(12px);
+}
+#menu a {
+    padding: 10px;
+    width: 180px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:tomato;
+}
+#menu a:hover {
+    background-color: #ffffff34;
+    backdrop-filter: blur(12px);
+}
 #main h1 {
     color: white;
     margin-bottom: 10px;
@@ -64,7 +88,7 @@ body {
 #text img {
     width: 50%;
     border: 1px solid purple;
-    /* filter: drop-shadow( 0 0 1rem blue); */
+    filter: drop-shadow( 0 0 1rem purple);
     border-radius: 360px;
 }
 #skills {
@@ -119,7 +143,7 @@ label {
         filter: hue-rotate(180deg);
     }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     #main {
         flex-direction: column;
     }
@@ -127,7 +151,7 @@ label {
         width: 100%;
     }
     #part {
-        width: 100%;
+        width: 95%;
         height: 100%;
     }
     #part h1 {
@@ -136,4 +160,9 @@ label {
     #css {
         margin-bottom: 25px;
     }
+  }
+  @media only screen and (max-width: 500px) {
+      #part {
+          width: 100%;
+      }
   }
