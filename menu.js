@@ -1,19 +1,12 @@
 var menuDisplayed = false;
 let menuBox = null;
 
-function getX(event) {
-    return event.clientX;
-}
-
-function getY(event) {
-    return event.clientY;
-}
-
-window.addEventListener("contextmenu", function() {
+window.addEventListener("contextmenu", function(event) {
 
     let body = document.querySelector("body");
-    let left = getX(event);
-    let top = getY(event); 
+    let left = event.clientX;
+    let top = event.clientY;
+    console.log(left + "," + top);
     
     menuBox = window.document.getElementById("menu");
     menuBox.style.left = `${left}px`;
